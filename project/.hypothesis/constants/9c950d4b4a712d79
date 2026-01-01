@@ -1,0 +1,4 @@
+# file: D:\AA-软件工程\project\logic\record_manager.py
+# hypothesis_version: 6.148.9
+
+[100, 2147483640, '%Y-%m-%d', 'amount', 'date', 'id', 'note', 'type', '日期不能为空', '日期不能为空字符串', '记录类型不能为空', '金额不能为空']

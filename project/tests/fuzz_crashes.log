@@ -1,0 +1,17 @@
+模糊测试崩溃日志
+开始时间: 2026-01-01 19:51:19.771816
+
+============================================================
+测试: deleteRecord-ctypes
+时间: 2026-01-01T19:51:19.814192
+输入: 'test_id'
+错误: NameError: name 'ctypes' is not defined
+堆栈:
+Traceback (most recent call last):
+  File "D:\AA-软件工程\project\tests\test_fuzz_quick.py", line 222, in main
+    result = manager.deleteRecord("test_id")
+  File "D:\AA-软件工程\project\logic\record_manager.py", line 101, in deleteRecord
+    overflowed_val = ctypes.c_int32(calculated_val).value
+                     ^^^^^^
+NameError: name 'ctypes' is not defined. Did you mean: 'type'? Or did you forget to import 'ctypes'?
+

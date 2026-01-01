@@ -1,0 +1,16 @@
+# 记账本应用依赖项
+# Python Accounting App Dependencies
+
+# 测试框架
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# 属性测试/模糊测试
+hypothesis>=6.0.0
+
+# GUI 框架 (PySide6)
+# 注意：在 CI 环境中可能需要跳过 GUI 相关测试
+# PySide6>=6.0.0
+
+# 其他依赖（如果需要）
+# 根据实际项目需求添加

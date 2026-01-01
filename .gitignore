@@ -1,0 +1,37 @@
+# ========================================
+# Git Ignore 配置
+# 只保留 project 文件夹和 .github 文件夹
+# ========================================
+
+# 忽略所有文件和文件夹
+/*
+
+# 但保留以下内容
+!.gitignore
+!.github/
+!project/
+!requirements.txt
+
+# project 文件夹内的忽略规则
+project/__pycache__/
+project/**/__pycache__/
+project/**/*.pyc
+project/**/*.pyo
+project/.pytest_cache/
+project/.hypothesis_db/
+project/**/*.tmp
+
+# 忽略虚拟环境
+.venv/
+venv/
+env/
+
+# 忽略 IDE 配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 忽略临时文件
+*.tmp
+~$*
