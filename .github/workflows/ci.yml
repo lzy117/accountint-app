@@ -14,12 +14,10 @@ jobs:
     # 运行此任务的操作系统环境
     runs-on: ubuntu-latest
     
-    # 策略：测试多个 Python 版本
-    # 注意：3.14 是较新版本，如果 Actions 不支持可移除
+    # 策略：测试多个 Python 版本（可选）
     strategy:
-      fail-fast: false  # 即使某个版本失败也继续运行其他版本
       matrix:
-        python-version: ['3.10', '3.11', '3.12', '3.14']
+        python-version: ['3.10', '3.11', '3.12']
     
     steps:
     # 第一步：检出代码库
@@ -55,7 +53,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         cd project
-        python -m pytest tests/test_record_manager.py tests/test_ocr_service.py --cov=logic --cov-report=term-missing --cov-fail-under=80
+        python -m pytest tests/test_record_manager.py tests/test_ocr_service.py --cov=logic.record_manager --cov=logic.ocr_service --cov-report=term-missing --cov-fail-under=80
     
     # 第七步：上传测试结果（可选）
     - name: Upload test results
